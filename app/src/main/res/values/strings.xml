@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">AdSkip</string>
+    <string name="foreground_notification_desc">服务运行中</string>
+
+    <string name="aby_label">AdSkip</string>
+    <string name="aby_desc">AdSkip</string>
+    <string name="enable">启用</string>
+    <string name="disable">关闭</string>
+
+    <string name="foreground_service">前台服务</string>
+    <string name="fs_desc">防止后台服务被系统强制结束</string>
+    <string name="accessibility_service">无障碍服务</string>
+    <string name="as_desc">点击前往无障碍服务设置</string>
+</resources>
