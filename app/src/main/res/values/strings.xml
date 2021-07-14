@@ -7,8 +7,12 @@
     <string name="enable">启用</string>
     <string name="disable">关闭</string>
 
+    <string name="title_applist">应用列表</string>
+
     <string name="foreground_service">前台服务</string>
     <string name="fs_desc">防止后台服务被系统强制结束</string>
     <string name="accessibility_service">无障碍服务</string>
     <string name="as_desc">点击前往无障碍服务设置</string>
+    <string name="applist">支持的APP</string>
+    <string name="applist_desc">支持跳过开屏广告的APP</string>
 </resources>

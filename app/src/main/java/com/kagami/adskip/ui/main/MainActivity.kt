@@ -7,14 +7,15 @@ import android.view.LayoutInflater
 import androidx.activity.viewModels
 import androidx.lifecycle.Observer
 import com.kagami.adskip.R
-import com.kagami.adskip.databinding.MainActivityBinding
+import com.kagami.adskip.databinding.ActivityMainBinding
 import com.kagami.adskip.service.ForegroundService
 import com.kagami.adskip.ui.BaseViewBindingActivity
 import com.kagami.adskip.vm.MainViewModel
+import splitties.activities.start
 
-class MainActivity: BaseViewBindingActivity<MainActivityBinding>() {
-    override val bindingCreator: (LayoutInflater) -> MainActivityBinding
-            = MainActivityBinding::inflate
+class MainActivity: BaseViewBindingActivity<ActivityMainBinding>() {
+    override val bindingCreator: (LayoutInflater) -> ActivityMainBinding
+            = ActivityMainBinding::inflate
     val viewModel:MainViewModel by viewModels()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -28,6 +29,9 @@ class MainActivity: BaseViewBindingActivity<MainActivityBinding>() {
             })
             accessibilityButton.setOnClickListener {
                 startActivity(Intent(Settings.ACTION_ACCESSIBILITY_SETTINGS))
+            }
+            appListButton.setOnClickListener {
+                start<AppListActivity>()
             }
             foregroundServiceSwitch.setOnCheckedChangeListener { buttonView, isChecked ->
                 if(buttonView.isChecked==isChecked){

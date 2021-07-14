@@ -28,32 +28,32 @@ public abstract class AppDatabase : RoomDatabase() {
 
         val defAds= listOf(
             DBAdItem().apply {
-                appName="cc"
+                appName="网易CC"
                 packageName="com.netease.cc"
                 activityName="com.netease.cc.appstart.CCMain"
             },
             DBAdItem().apply {
-                appName="taobao"
+                appName="淘宝"
                 packageName="com.taobao.taobao"
                 activityName="com.taobao.tao.TBMainActivity"
             },
             DBAdItem().apply {
-                appName="bili"
+                appName="哔哩哔哩"
                 packageName="tv.danmaku.bili"
                 activityName="tv.danmaku.bili.MainActivityV2"
             },
             DBAdItem().apply {
-                appName="jd"
+                appName="京东"
                 packageName="com.jingdong.app.mall"
                 activityName="com.jingdong.app.mall.MainFrameActivity"
             },
             DBAdItem().apply {
-                appName="meituan"
+                appName="美团"
                 packageName="com.sankuai.meituan"
                 activityName="com.meituan.android.pt.homepage.activity.MainActivity"
             },
             DBAdItem().apply {
-                appName="ele"
+                appName="饿了么"
                 packageName="me.ele"
                 activityName="me.ele.application.ui.splash.SplashActivity"
             },

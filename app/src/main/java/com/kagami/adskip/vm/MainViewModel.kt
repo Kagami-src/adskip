@@ -35,7 +35,7 @@ class MainViewModel: ViewModel(){
             _foregroundServiceState.value=checkForegroundServiceState(context)
         }
     }
-    suspend fun checkAccessibilityState(context:Context)= withContext(Dispatchers.IO){
+    private suspend fun checkAccessibilityState(context:Context)= withContext(Dispatchers.IO){
         val expectedComponentName = ComponentName(context, SkipService::class.java)
 
         val enabledServicesSetting = Settings.Secure.getString(context.contentResolver, Settings.Secure.ENABLED_ACCESSIBILITY_SERVICES)
@@ -55,7 +55,7 @@ class MainViewModel: ViewModel(){
         return@withContext false
     }
 
-    suspend fun checkForegroundServiceState(context:Context)= withContext(Dispatchers.IO){
+    private suspend fun checkForegroundServiceState(context:Context)= withContext(Dispatchers.IO){
         val manager = context.getSystemService(Context.ACTIVITY_SERVICE) as ActivityManager?
         for (service in manager!!.getRunningServices(Int.MAX_VALUE)) {
             if (ForegroundService::class.java.name.equals(service.service.className)) {
